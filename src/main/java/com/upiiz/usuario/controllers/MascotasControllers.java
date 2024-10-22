@@ -1,6 +1,7 @@
 package com.upiiz.usuario.controllers;
 
 
+import com.upiiz.usuario.models.Consulta;
 import com.upiiz.usuario.models.Mascotas;
 import com.upiiz.usuario.services.MascotasServices;
 import org.springframework.http.ResponseEntity;
@@ -53,8 +54,8 @@ public class MascotasControllers {
 
 
     @GetMapping("/usuario/{id_usuario}")
-    public ResponseEntity<Mascotas> getId_usuario(@PathVariable Long id_usuario){
-        return ResponseEntity.ok((Mascotas) mascotasService.getAllId_usuario(id_usuario));
+    public ResponseEntity<List<Mascotas>> getId_usuario(@PathVariable Long id_usuario){
+        return ResponseEntity.ok(mascotasService.getAllId_usuario(id_usuario));
     }
 
 

@@ -17,9 +17,9 @@ public class Usuario {
     private Boolean estatus_usuario;
     private Boolean baja_usuario;
     private byte[] foto_usuario;
-    private Integer id_veterinario;
+    private Long id_veterinario;
 
-    public Usuario(Long id_usuario, String nombre_usuario, String apellido_usuario, String telefono_usuario, String email_usuario, String estado_usuario, String ciudad_usuario, String colonia_usuario, Integer cp_usuario, String calle_usuario, String num_ext_usuario, String password_usuario, Boolean estatus_usuario, Boolean baja_usuario, byte[] foto_usuario, Integer id_veterinario) {
+    public Usuario(Long id_usuario, String nombre_usuario, String apellido_usuario, String telefono_usuario, String email_usuario, String estado_usuario, String ciudad_usuario, String colonia_usuario, Integer cp_usuario, String calle_usuario, String num_ext_usuario, String password_usuario, Boolean estatus_usuario, Boolean baja_usuario, byte[] foto_usuario, Long id_veterinario) {
         this.id_usuario = id_usuario;
         this.nombre_usuario = nombre_usuario;
         this.apellido_usuario = apellido_usuario;
@@ -100,7 +100,7 @@ public class Usuario {
         return foto_usuario;
     }
 
-    public Integer getId_veterinario() {
+    public Long getId_veterinario() {
         return id_veterinario;
     }
 
@@ -164,7 +164,7 @@ public class Usuario {
         this.foto_usuario = foto_usuario;
     }
 
-    public void setId_veterinario(Integer id_veterinario) {
+    public void setId_veterinario(Long id_veterinario) {
         this.id_veterinario = id_veterinario;
     }
 

@@ -51,16 +51,16 @@ public class ConsultaControllers {
     }
 
     @GetMapping("/mascota/{id_mascota}")
-    public ResponseEntity<Consulta> getId_Mascota(@PathVariable Long id_mascota){
-        return ResponseEntity.ok((Consulta) consultasService.getAllId_mascota(id_mascota));
+    public ResponseEntity<List<Consulta>> getId_Mascota(@PathVariable Long id_mascota){
+        return ResponseEntity.ok(consultasService.getAllId_mascota(id_mascota));
     }
     @GetMapping("/usuario/{id_cita}")
-    public ResponseEntity<Consulta> getId_cita(@PathVariable Long id_cita){
-        return ResponseEntity.ok((Consulta) consultasService.getAllId_cita(id_cita));
+    public ResponseEntity<List<Consulta>> getId_cita(@PathVariable Long id_cita){
+        return ResponseEntity.ok(consultasService.getAllId_cita(id_cita));
     }
     @GetMapping("/veterinario/{id_veterinario}")
-    public ResponseEntity<Consulta> getId_Veterinario(@PathVariable Long id_veterinario){
-        return ResponseEntity.ok((Consulta) consultasService.getAllId_veterinario(id_veterinario));
+    public ResponseEntity<List<Consulta>> getId_Veterinario(@PathVariable Long id_veterinario){
+        return ResponseEntity.ok(consultasService.getAllId_veterinario(id_veterinario));
     }
 
 }

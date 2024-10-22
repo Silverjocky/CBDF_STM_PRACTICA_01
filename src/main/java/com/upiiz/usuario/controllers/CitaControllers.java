@@ -52,16 +52,16 @@ public class CitaControllers {
     }
 
     @GetMapping("/mascota/{id_mascota}")
-    public ResponseEntity<Cita> getId_Mascota(@PathVariable Long id_mascota){
-        return ResponseEntity.ok((Cita) citasService.getAllId_mascota(id_mascota));
+    public ResponseEntity<List<Cita>> getId_Mascota(@PathVariable Long id_mascota){
+        return ResponseEntity.ok(citasService.getAllId_mascota(id_mascota));
     }
     @GetMapping("/usuario/{id_usuario}")
-    public ResponseEntity<Cita> getId_usuario(@PathVariable Long id_usuario){
-        return ResponseEntity.ok((Cita) citasService.getAllId_usuario(id_usuario));
+    public ResponseEntity<List<Cita>> getId_usuario(@PathVariable Long id_usuario){
+        return ResponseEntity.ok(citasService.getAllId_usuario(id_usuario));
     }
     @GetMapping("/veterinario/{id_veterinario}")
-    public ResponseEntity<Cita> getId_Veterinario(@PathVariable Long id_veterinario){
-        return ResponseEntity.ok((Cita) citasService.getAllId_veterinario(id_veterinario));
+    public ResponseEntity<List<Cita>> getId_Veterinario(@PathVariable Long id_veterinario){
+        return ResponseEntity.ok(citasService.getAllId_veterinario(id_veterinario));
     }
 
 }

@@ -51,9 +51,16 @@ public class UsuarioControllers {
         return ResponseEntity.noContent().build();
     }
 
+    //@GetMapping("/veterinario/{id_veterinario}")
+    // public ResponseEntity<Usuario> getId_Veterinario(@PathVariable Long id_veterinario){
+    //      return ResponseEntity.ok(usuariosService.getAllId_veterinario(id_veterinario));
+    // }
+
     @GetMapping("/veterinario/{id_veterinario}")
-    public ResponseEntity<Usuario> getId_Veterinario(@PathVariable Long id_veterinario){
-        return ResponseEntity.ok((Usuario) usuariosService.getAllId_veterinario(id_veterinario));
+    public ResponseEntity<List<Usuario>> getId_Veterinario(@PathVariable Long id_veterinario) {
+        return ResponseEntity.ok(usuariosService.getAllId_veterinario(id_veterinario));
     }
+
+
 
 }
